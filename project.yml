@@ -1,0 +1,9 @@
+packages:
+  - name: metadata
+    actions:
+      - name: extract
+        runtime: python:default
+        web: true
+        limits:
+          timeout: 30s # Max execution time per invocation
+          memory: 128Mi # Memory allocation (128Mi, 256Mi, 512Mi, etc.)
