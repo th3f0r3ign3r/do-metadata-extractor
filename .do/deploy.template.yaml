@@ -6,7 +6,7 @@ functions:
       branch: main
       deploy_on_push: true
       repo: th3f0r3ign3r/do-metadata-extractor
-    name: py-api
+    name: do-metadata-extractor
     routes:
       - path: /
     source_dir: /

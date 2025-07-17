@@ -3,7 +3,7 @@ packages:
     actions:
       - name: extract
         runtime: python:default
-        web: true
+        web: false
         limits:
-          timeout: 30s # Max execution time per invocation
-          memory: 128Mi # Memory allocation (128Mi, 256Mi, 512Mi, etc.)
+          timeout: 10000 # 10 seconds
+          memory: 128 # Memory allocation (128, 256, 512, etc.)

@@ -1,3 +1,6 @@
 .venv
 __pycache__
 .env*
+.DS_Store
+.deployed
+__deployer__.zip

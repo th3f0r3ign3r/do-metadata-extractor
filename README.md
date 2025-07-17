@@ -30,7 +30,7 @@ The output from the deploy command will resemble the following.
 Deploying 'do-metadata-extractor'
   to namespace 'fn-...'
   on host '...'
-Deployment status recorded in 'do-metadata-extractor/.deployed'
+Deployment status recorded in '.deployed'
 
 Deployed functions ('doctl sls fn get <funcName> --url' for URL):
   - metadata/extract

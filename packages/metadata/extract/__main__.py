@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from http.client import HTTPException
 from urllib.parse import urljoin, urlparse
 import requests
 import json
@@ -29,9 +28,7 @@ class MetadataExtractor:
             return response, soup, final_url
 
         except requests.exceptions.RequestException as e:
-            raise HTTPException(
-                status_code=400, detail=f"Failed to fetch URL: {str(e)}"
-            )
+            raise Exception(f"Failed to fetch URL: {str(e)}")
 
     def extract_basic_metadata(self, soup: BeautifulSoup) -> dict:
         """Extract basic HTML metadata"""
@@ -261,7 +258,7 @@ def main(args):
         metadata = extractor.extract_metadata(url)
         return {
             "statusCode": 200,
-            "body": metadata.model_dump(),
+            "body": metadata,
         }
     except Exception as e:
         return {"statusCode": 500, "body": {"error": str(e)}}
